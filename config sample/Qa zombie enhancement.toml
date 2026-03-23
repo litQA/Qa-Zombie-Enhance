@@ -1,0 +1,105 @@
+[base_function_settings]
+	#Other zombie enhancement settings will be invalid if disabled
+	zombieenhancementglobaltoggle = true
+	#Controls whether player can trigger teleport requests to other players
+	teleportrequestfunction = false
+	#Whether baby zombies are banned
+	disablebabyzombiespawning = false
+	#Enables a chance for zombies to spawn with a mount when generated (use with caution as it is experimental).
+	monsterspawnwithmountenabled = false
+	#Mobs in this blacklist will never spawn
+	mobspawnblacklist = ["modid:registered_name1", "modid:registered_name2"]
+
+[zombie_attribute_growth_settings]
+	#Day when zombies start getting attribute bonuses - 0/negative number means bonuses start from day 1
+	zombieattributebonusstartday = 5.0
+	#Day when zombies stop getting attribute bonuses - 0/negative number means attribute bonuses never stop
+	zombieattributebonusstopday = 100.0
+
+	[zombie_attribute_growth_settings.max_health]
+		#Zombie health bonus multiplier - 0/negative number disables health bonus
+		zombiehealthbonusmultiplier = 0.5
+		#Zombie health bonus method - Optional values: linear, square, logarithm
+		zombiehealthbonustype = "linear"
+		#Optional values: all (all zombies get full bonus value), linear (linear distribution, max = bonus value), normal_distribution (normal distribution, max = bonus value)
+		zombiehealthbonusdistribution = "normal_distribution"
+
+	[zombie_attribute_growth_settings.armor]
+		# Zombie armor bonus multiplier - 0/negative number disables armor bonus
+		zombiearmorbonusmultiplier = 0.1
+		#Zombie armor bonus method - Optional values: linear, square, logarithm
+		zombiearmorbonustype = "linear"
+		#Optional values: all (all zombies get full bonus value), linear (linear distribution, max = bonus value), normal_distribution (normal distribution, max = bonus value)
+		zombiearmorbonusdistribution = "normal_distribution"
+
+	[zombie_attribute_growth_settings.attack]
+		#Zombie attack damage bonus multiplier - 0/negative number disables attack damage bonus
+		zombieattackdamagebonusmultiplier = 0.1
+		#Zombie attack damage bonus method - Optional values: linear, square, logarithm
+		zombieattackdamagebonustype = "linear"
+		#Optional values: all (all zombies get full bonus value), linear (linear distribution, max = bonus value), normal_distribution (normal distribution, max = bonus value)
+		zombieattackdamagebonusdistribution = "normal_distribution"
+
+	[zombie_attribute_growth_settings.equipment]
+		#The in-game day when zombies start spawning with equipment - 0/negative will disable this feature
+		zombieequipunlockday = 7.0
+		#ase probability of a zombie spawning with a weapon on the unlock day - this is the starting chance before growth is applied
+		zombieweaponbasechance = 0.1
+		#Growth pattern for weapon spawn probability after the unlock day - Optional values: none, linear, inverse
+		zombieweaponchancegrowthtype = "linear"
+
+	[special_zombie_spawn_settings.fire-_resistant_zombies]
+		#Day when fire-resistant zombies start spawning - 0/negative number disables this type of zombie
+		fireresistantzombiespawnstartday = 30.0
+		#Base spawn chance of fire-resistant zombies
+		fireresistantzombiebasespawnchance = 0.2
+		#Spawn chance growth mode of fire-resistant zombies with days - Optional values: fixed, linear, square, logarithm
+		fireresistantzombiespawnchancegrowthtype = "linear"
+		#Whether the fire resistance particle effect is visibly shown on enhanced zombies
+		fireresistancevisibility = false
+
+	[special_zombie_spawn_settings.block-holding_block-placing_zombies]
+		#Day when block-holding block-placing zombies start spawning - 0/negative number disables this type of zombie
+		blockplacingzombiespawnstartday = 30.0
+		#Base spawn chance of block-placing zombies
+		blockplacingzombiebasespawnchance = 0.05
+		#Spawn chance growth mode of block-placing zombies with days - Optional values: fixed, linear, square, inverse
+		blockplacingzombiespawnchancegrowthtype = "linear"
+		#Cooldown time (in ticks) between enhanced zombies attempting to place blocks
+		zombieblockplacecooldown = 40.0
+		#Maximum number of blocks a block-holding zombie can place (must be ≥16; 0/negative mean infinite placement)
+		zombieplacemaxcount = 64.0
+		#List of valid block types that block-holding zombies can carry
+		zombiepossibleplacedblocks = ["minecraft:oak_planks", "minecraft:spruce_planks", "minecraft:birch_planks", "minecraft:jungle_planks", "minecraft:acacia_planks", "minecraft:dark_oak_planks", "minecraft:cherry_planks", "minecraft:mangrove_planks", "minecraft:bamboo_planks", "minecraft:crimson_planks", "minecraft:warped_planks", "minecraft:stone", "minecraft:granite", "minecraft:diorite", "minecraft:andesite", "minecraft:tuff", "minecraft:cobbled_deepslate", "minecraft:dirt", "minecraft:coarse_dirt", "minecraft:rooted_dirt", "minecraft:cobblestone", "minecraft:mossy_cobblestone", "minecraft:dripstone_block", "minecraft:sandstone"]
+
+	[special_zombie_spawn_settings.pickaxe-wielding_block-breaking_zombies]
+		#Day when pickaxe-wielding block-breaking zombies start spawning - 0/negative number disables this type of zombie
+		pickaxezombiespawnstartday = 20.0
+		#Base spawn chance of pickaxe-wielding zombies
+		pickaxezombiebasespawnchance = 0.05
+		#Spawn chance growth mode of pickaxe-wielding zombies with days - Optional values: fixed, linear, square, inverse
+		pickaxezombiespawnchancegrowthtype = "linear"
+		#Cooldown time (in ticks) between enhanced zombies attempting to break blocks
+		zombieblockbreakcooldown = 200.0
+		#The blocks zombies with pickaxe can break - tag
+		zombiebreakableblocktags = ["minecraft:mineable/axe", "minecraft:mineable/pickaxe", "minecraft:mineable/hoe", "minecraft:mineable/shovel", "minecraft:impermeable", "minecraft:dampens_vibrations"]
+		#The blocks zombies with pickaxe can break - list
+		zombiebreakableblocklist = ["minecraft:glowstone", "minecraft:obsidian"]
+		#The blocks zombies with pickaxe can never break - blacklist
+		zombiebreakableblockblacklist = ["minecraft:obsidian", "minecraft:crying_obsidian", "minecraft:netherite_block"]
+		#Base efficiency of zombies when breaking blocks (player efficiency is 1.0), not related to tool types but related to tool enchantments
+		zombiediggingbaseefficiency = 0.5
+
+	[special_zombie_spawn_settings.tnt-holding_exploding_zombies]
+		#Day when TNT-holding and detonating zombies start spawning - 0/negative number disables this type of zombie
+		tntzombiespawnstartday = 50.0
+		#Base spawn chance of TNT-holding zombies
+		tntzombiebasespawnchance = 0.0
+		#Spawn chance growth mode of TNT-holding zombies with days - Optional values: fixed, linear, square, inverse
+		tntzombiespawnchancegrowthtype = "linear"
+		#Cooldown time (in ticks) between enhanced zombies attempting to place TNT
+		zombietntplacecooldown = 200.0
+		#If enabled, TNT placed by enhanced zombies will ignite immediately instead of having a normal fuse
+		zombietntinstantignition = false
+		#Maximum number of tnt a tnt-holding zombie can place (must be ≥1; 0/negative  mean infinite placement)
+		zombietntmaxcount = 8.0
