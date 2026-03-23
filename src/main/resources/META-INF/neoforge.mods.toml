@@ -12,19 +12,16 @@ credits="LitQA"
 authors="LitQA"
 description="A mod that enhances the zombies."
 
-# Start of user code block mod configuration
-# End of user code block mod configuration
+
 
 [[mixins]]
     config = "qa_zombie.mixins.json"
 
-# Start of user code block custom mixins
-# End of user code block custom mixins
 
 [[dependencies.qa_zombie]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1.190,)"
+    versionRange="[21.1.190,21.2)"
     ordering="AFTER"
     side="BOTH"
 
@@ -35,8 +32,3 @@ description="A mod that enhances the zombies."
     ordering="AFTER"
     side="BOTH"
 
-
-
-
-# Start of user code block dependencies configuration
-# End of user code block dependencies configuration
